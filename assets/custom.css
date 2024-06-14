@@ -1,0 +1,85 @@
+/* custom.css */
+
+/* Style for search bar and dropdown */
+.input-style, .custom-dropdown .Select__control {
+    border-radius: 25px !important;
+    border: 2px solid #000000 !important; /* Black border */
+    height: 50px !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 18px !important;
+    box-shadow: none !important;
+    width: 400px !important; /* Increased width */
+    background-color: white !important;
+    color: #000000 !important; /* Black text */
+}
+
+.input-style:focus, .custom-dropdown .Select__control--is-focused {
+    border-color: #000000 !important; /* Black border on focus */
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3) !important; /* Match the search bar focus */
+}
+
+.custom-dropdown .Select__value-container {
+    padding: 0 15px !important;
+}
+
+.custom-dropdown .Select__indicator-separator {
+    display: none !important;
+}
+
+.custom-dropdown .Select__dropdown-indicator {
+    padding: 0 12px !important;
+}
+
+.custom-dropdown .Select__menu {
+    border-radius: 0 0 25px 25px !important; /* Rounded bottom corners */
+    border: 2px solid #000000 !important; /* Black border */
+    border-top: none !important; /* Remove top border to connect with control */
+    box-shadow: none !important;
+}
+
+/* Style for the headings and checklists */
+.heading-style {
+    color: #62e0b4 !important; /* Green color for titles */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 16px !important;
+}
+
+.checklist-style {
+    color: #000000 !important; /* Black text */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+}
+
+/* General adjustments */
+body {
+    background-color: #FFFFFF !important; /* White background */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    color: #62e0b4 !important; /* Green color for titles */
+}
+
+h4 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    color: #50b692 !important; /* Green color for titles */
+}
+
+/* Adjustments for better space utilization */
+#title-container {
+    margin-bottom: 50px; /* Increased spacing */
+}
+
+#search-container {
+    margin-bottom: 40px; /* Increased spacing */
+}
+
+#filter-container {
+    margin-bottom: 50px;
+}
+
+#graph-container {
+    margin-top: 60px; /* Increased spacing */
+    height: 600px; /* Increased height */
+}
