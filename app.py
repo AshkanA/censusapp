@@ -1,10 +1,11 @@
+import os
 import pandas as pd
 import plotly.graph_objs as go
 from dash import Dash, dcc, html, Input, Output, State
 from fuzzywuzzy import process
 
 # Load the Excel file
-file_path = './data/CensusData.xlsx'  # Updated data source
+file_path = './data/CensusData.xlsx'  # Update this to the correct path if needed
 data = pd.read_excel(file_path)
 
 # Data preprocessing
@@ -68,10 +69,10 @@ app = Dash(__name__)
 app.config.suppress_callback_exceptions = True
 
 colors = {
-    'background': '#FFFFFF',  # White background
-    'text': '#000000',  # Black text
-    'accent': '#008000',  # Green accent color
-    'title': '#008000'  # Green title color
+    'background': '#FFFFFF',
+    'text': '#000000',
+    'accent': '#008000',
+    'title': '#008000'
 }
 
 search_style = {
@@ -482,4 +483,5 @@ def download_csv(n_clicks, selected_city_code, selected_city_compare_code, selec
     return dcc.send_data_frame(filtered_data.to_csv, f"{selected_city_code}_filtered_data.csv", index=False)
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    port = int(os.environ.get('PORT', 8050))
+    app.run_server(debug=True, host='0.0.0.0', port=port)
