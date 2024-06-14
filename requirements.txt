@@ -3,3 +3,5 @@ pandas
 plotly
 fuzzywuzzy
 gunicorn
+openpyxl
+python-Levenshtein
